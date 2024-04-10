@@ -29,7 +29,7 @@ b = 65537
 c = 12081119646819624328715224469366880402640517618777792852697306879262431111815165298398632770390391033245249514188404807170307247662117017771896868993777711
 print((a**b)%c)
 ```
-╒                                                                                                                      ╕
+                              
   Challenge 3:                                                                                                          
       Now, it's pretty obvious that we deal with integers in RSA. But how do we convert them to ASCII?                  
       When integers are converted to bytes, it turns into a string of characters that are readable (most of the time).  
@@ -46,7 +46,7 @@ l = (a.bit_length() + 7) // 8
 c = a.to_bytes(l, byteorder='big')
 print(c)
 ```
-╒                                                                                         ╕
+ 
   Challenge 4:                                                                             
       Now that you know how to convert bytes to integers, let's do the opposite.           
       Assuming you need to use RSA to encrypt a message,                                   
@@ -54,13 +54,13 @@ print(c)
       Similar to the last one, try to do this in Python.                                   
                                                                                            
   Your 4th challenge is to convert the following bytes to an integer: b'BabyBubbleBlue'    
-╘                                                                                         ╛
+ 
 ```
 b = b'BabyBubbleBlue'
 c = int.from_bytes(b, byteorder='big')
 print(c)
 ```
-╒                                                                                                                                  ╕
+                                          
   Challenge 5:                                                                                                                      
       So you're finally here, ready to encrypt your first message with RSA.                                                         
       If you've done your reading, you should know that encryption is done like this:                                               
@@ -80,7 +80,7 @@ b=int.from_bytes(txt.encode(), 'big')
 ans = pow(b, e, n)
 print(ans)
 ```
-╒                                                                 ╕
+                                                                  ╕
   Challenge 6:                                                     
       Now that you've learnt to encrypt using an RSA Public key,   
       it's time to learn how to decrypt using an RSA Private key.  
@@ -105,7 +105,7 @@ l = (a.bit_length() + 7) // 8
 c = a.to_bytes(l, byteorder='big')
 print(c)
 ```
-╒                                                                                             ╕
+     
   Challenge 7:                                                                                 
       Great work so far! You've learnt how to encrypt and decrypt messages using RSA.          
       Now, let's try to create your own RSA key pair. The first step is to                     
@@ -129,7 +129,7 @@ q = 223548505081667812376946559606986057893
 phi = (p-1)*(q-1)
 print(phi)
 ```
-╒                                                                                         ╕
+ 
   Challenge 8:                                                                             
       Great work! The next step is to calculate the private key d.                         
       This can be done by calculating the modular multiplicative inverse of                
@@ -148,7 +148,7 @@ print(phi)
       That should give you the private key d.                                              
                                                                                            
   Your 8th challenge is to calculate the private key d:                                    
-╘                                                                                         ╛
+ 
 e = 65537
 phi = 6040530736567947369501159510312871912817682485385467038065939221077871371867752621870765479917330035438716285734316075589461070087125307656587738034549424
 
@@ -158,7 +158,7 @@ t = 6040530736567947369501159510312871912817682485385467038065939221077871371867
 d = pow(e, -1, t)
 print( d)
 ```
-╒                                                                                                            ╕
+                    
   Challenge 9:                                                                                                
       If you've solved all the previous challenges, you should have a good understanding of RSA.              
       There is a lot more to it, but you've learnt the basics. This should be your first real challenge.      
@@ -187,7 +187,7 @@ l = (a.bit_length() + 7) // 8
 c = a.to_bytes(l, byteorder='big')
 print(c)
 ```
-╒                                                                                                              ╕
+                      
   Challenge 10:                                                                                                 
       Welcome to the final challenge! You've made it this far, so you should be able to solve this one.         
       Alice encrypted and sent a very secret message to Bob using RSA. But she chose her parameters poorly.     
